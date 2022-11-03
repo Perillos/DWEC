@@ -1,0 +1,8 @@
+
+
+
+function cadAleatoria(params) {
+    params
+
+    
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript For Loop</h2>
+
+
+
+<script>
+const cars = ["BMW", "Volvo", "Mini", "Renault", "Seat", "Tesla", "Citroën"];
+
+let marca = prompt("Escribe una marca de coche: ");
+
+//cars.length es una propiedad que me indica la cantidad de elementos del array cars
+let findText
+
+// for(i = 0;cars[i]; i++) {}
+
+for (let i = 0; i < cars.length; i++) {
+    if (marca != cars[i]) {
+        findText = false;
+    } else {
+        findText = true;
+        break;
+    }   
+}
+
+findText ? console.log(`Tenemos disponible la marca ${marca}`) : console.log(`Lo sentimos, la marca ${marca} no está disponible`);
+
+
+</script>
+
+</body>
+</html>
