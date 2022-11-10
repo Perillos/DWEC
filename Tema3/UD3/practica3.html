@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="app1.js" defer ></script> -->
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Práctica 3</title>
 </head>
 <body>
     <script>
-
     // 1
         function cadAleatoria () {
 
@@ -55,23 +53,25 @@
         
     // 7
         for (let i = 0; i < 2; i++) {
-            
-            
+
             let yearfMat = prompt("Establece el año")
             while (isNaN(yearfMat)) {
                 alert(`"${yearfMat}" nos es un numero`)
                 yearfMat = prompt("Establece el año")
             }
+
             let mouthfMat = prompt("Establece el mes")
             while (isNaN(mouthfMat)) {
                 alert(`"${mouthfMat}" nos es un numero`)
                 mouthfMat = prompt("Establece el año")
             }
+
             let dayfMat = prompt("Establece el día")
             while (isNaN(dayfMat)) {
                 alert(`"${dayfMat}" nos es un numero`)
                 dayfMat = prompt("Establece el año")
             }
+
             const coche = new Coche (`${mouthfMat}/${dayfMat}/${yearfMat}`, i + 5)
             const mot = Math.floor(Math.random() * 2)
             if (mot === 0) {
@@ -82,8 +82,47 @@
             almacen.push(coche)
         }
 
-
+    // 8
+        almacen.forEach(element => {
+            if (element.fMat >= new Date("1/1/2000")) {
+                const etsEco = ["0","ECO","B","C"]
+                const mot = Math.floor(Math.random() * etsEco.length)
+                element.etEco = etsEco[mot]
+            }
+        });
     
+    // 9
+        Coche.tipoCombustible = "electrico"
+
+    // 10
+        for (const coche of almacen) {
+            console.log(coche.etEco);  
+        }
+
+    //11
+        for (const coche of almacen) {
+            console.log(coche.tipoCombustible);  
+        }
+
+    //12
+        Coche.prototype.cambiarTipoCombustible = function (tipoCombustible) {
+            return this.tipoCombustible = tipoCombustible
+        }
+
+    //13
+        almacen.forEach(element => {
+            console.log(element);
+            if (elemento.etEco == "0") {
+                element.cambiarTipoCombustible("gasolina")
+            }
+        })
+        
+        
+        
+    //14
+        almacen.map(coche => {console.log(coche.tipoCombustible)})
+
+        
     </script>
     
 </body>
