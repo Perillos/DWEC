@@ -4,11 +4,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="app1.js" defer ></script>
+    <!-- <script src="app1.js" defer ></script> -->
     <title>Document</title>
 </head>
 <body>
+    <script>
 
+    // 1
+        function cadAleatoria () {
+
+            let elem = String(arguments[Math.floor(Math.random() * (arguments.length))])
+            return elem
+        }
+
+    // 2
+        const almacen =[]
+
+    // 3 /4
+        function Coche(fMat, matricula, motor) {
+            this.fMat = new Date(fMat);
+            this.matricula = matricula;
+            this.motor = ""
+
+            this.arrancar = function () {
+                this.motor = "arrancado"
+            }
+            this.apagar = function () {
+                this.motor = "apagado"
+            }
+        }
+
+    // 5
+        for (let i = 0; i < 5; i++) {
+            const coche = new Coche(`1/${i+1}/2000`, i)
+            const mot = Math.floor(Math.random() * 2)
+            if (mot === 0) {
+                coche.apagar()
+            } else {
+                coche.arrancar()
+            }
+            almacen.push(coche)  
+        }
+
+    // 6
+        almacen.forEach(element => {
+            if (element.matricula % 2 != 0) {
+                element.fMat = new Date("3/3/1995")
+            }
+        });
+        
+    // 7
+        for (let i = 0; i < 2; i++) {
+            
+            
+            let yearfMat = prompt("Establece el año")
+            while (isNaN(yearfMat)) {
+                alert(`"${yearfMat}" nos es un numero`)
+                yearfMat = prompt("Establece el año")
+            }
+            let mouthfMat = prompt("Establece el mes")
+            while (isNaN(mouthfMat)) {
+                alert(`"${mouthfMat}" nos es un numero`)
+                mouthfMat = prompt("Establece el año")
+            }
+            let dayfMat = prompt("Establece el día")
+            while (isNaN(dayfMat)) {
+                alert(`"${dayfMat}" nos es un numero`)
+                dayfMat = prompt("Establece el año")
+            }
+            const coche = new Coche (`${mouthfMat}/${dayfMat}/${yearfMat}`, i + 5)
+            const mot = Math.floor(Math.random() * 2)
+            if (mot === 0) {
+                coche.apagar()
+            } else {
+                coche.arrancar()
+            }
+            almacen.push(coche)
+        }
+
+
+    
+    </script>
     
 </body>
 </html>
