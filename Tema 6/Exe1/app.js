@@ -1,11 +1,4 @@
 
-// butonUp.onclick = pressUp
-// const butonDown = document.getElementById('down')
-// butonDown.onclick = pressDown
-// const butonRight = document.getElementById('right')
-// butonRight.onclick = pressRight
-// const butonLeft = document.getElementById('left')
-// butonLeft.onclick = pressLeft
 
 
 
@@ -40,7 +33,7 @@ const pressUp = () => {
 }
 
 
-const pressDown = (eve) => {
+const pressDown = () => {
   const marcSel = document.getElementById('marc')
   const parentMarc = marcSel.parentNode
   const paranChilds = parentMarc.children
@@ -69,7 +62,7 @@ const pressDown = (eve) => {
 }
 
 
-const pressRight = (eve) => {
+const pressRight = () => {
   const marcSel = document.getElementById('marc')
 
   if(marcSel.previousElementSibling) {
@@ -77,30 +70,10 @@ const pressRight = (eve) => {
   }
 
 }
-const pressLeft = (eve) => {
+const pressLeft = () => {
   const marcSel = document.getElementById('marc')
   if(marcSel.nextElementSibling) {
     marcSel.nextElementSibling.after(marcSel)
   }
 
 }
-
-
-
-/* Función de inicio */
-// const initialGame = () => {
-//   const butonUp = document.getElementById('up')
-//   butonUp.onclick = pressUp
-//   const butonDown = document.getElementById('down')
-//   butonDown.onclick = pressDown
-//   const butonRight = document.getElementById('right')
-//   butonRight.onclick = pressRight
-//   const butonLeft = document.getElementById('left')
-//   butonLeft.onclick = pressLeft
-// }
-
-// const butonUp = document.getElementById('up')(onclick,pressUp)
-
-
-/* Incio la función */
-// initialGame()

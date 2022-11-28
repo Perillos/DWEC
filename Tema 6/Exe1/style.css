@@ -1,3 +1,38 @@
-table, th, td {
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+table, td {
   border: 1px solid black;
+}
+td {
+  width: 100px;
+  height: 100px;
+  font-size: 50px;
+  text-align: center;
+}
+
+
+.bottons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+.up {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+.down {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+}
+.right {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+.left {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
 }
