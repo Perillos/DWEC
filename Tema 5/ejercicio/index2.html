@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <h1>haga clic en cualquier parte de la ventana</h1>
+
+<script>
+// Obtener altura de la ventana en pixels
+var windowHeight = window.innerHeight;
+
+// Dividir la altura de la ventana en tres partes iguales
+var topHeight = windowHeight / 3;
+var bottomHeight = topHeight * 2;
+
+// Capturar coordenadas del ratón al hacer clic en la ventana
+window.addEventListener("click", function(event) {
+  var mouseX = event.clientX;
+  var mouseY = event.clientY;
+
+  // Determinar en qué parte de la ventana se ha hecho clic
+  if (mouseY < topHeight) {
+    // Clic en la parte superior
+    escribePalabras("zona", "alta", "pantalla");
+  } else if (mouseY > bottomHeight) {
+    // Clic en la parte inferior
+    escribePalabras("zona", "baja", "de", "la", "pantalla");
+  } else {
+    // Clic en la franja central
+    escribePalabras("ahora", "has", "dado", "en", "el", "centro");
+  }
+});
+
+// Función para mostrar todos los argumentos pasados
+function escribePalabras() {
+  for (var i = 0; i < arguments.length; i++) {
+    console.log(arguments[i]);
+  }
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+
+

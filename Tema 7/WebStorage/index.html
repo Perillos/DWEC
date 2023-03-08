@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script src="app.js" defer></script> -->
+    <script src="app2.js" defer></script>
+  </head>
+  <body>
+    <h1>Formulario de coches</h1>
+    <form>
+      <label for="matricula">Matrícula:</label>
+      <input type="text" id="matricula" name="matricula" /><br />
+
+      <label for="color">Color:</label>
+      <input type="text" id="color" name="color" /><br />
+
+      <label for="marca">Marca:</label>
+      <input type="text" id="marca" name="marca" /><br />
+
+      <br />
+      <button type="button" onclick="guardarCoche()">Guardar</button>
+      <button type="button" onclick="eliminarCoche()">Eliminar coche</button>
+      <button type="button" onclick="verCocheSiguiente()">
+        Ver coche siguiente
+      </button>
+      <button type="button" onclick="verCocheAnterior()">
+        Ver coche anterior
+      </button>
+      <button type="button" onclick="limpiarFormulario()">
+        Limpiar formulario
+      </button>
+    </form>
+  </body>
+</html>

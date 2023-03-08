@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio AJAX</title>
+  <!-- Biblioteca jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- scripts necesarios, activar get o post -->
+  <!-- <script src="appPost.js" defer></script> -->
+  <!-- <script src="appGet.js" defer></script> -->
+  <script src="fecthpost.js" defer></script>
+</head>
+<body>
+
+	<form  method="post" action="ServidorPOST.php" id="formulario">
+		Introduce 2 números:<br />
+    <p>Token:<input type="text" id="token" name="token"></p>
+		<p>Numero 1: <input type="text" id="val1" name="val1"></p>
+		<p>Numero 2: <input type="text" id="val2" name="val2"></p>
+		<p>
+      <button id="boton" type="submit">Enviar</button>
+    </p>
+    <input type="submit" value="Solicitar código secreto">
+	</form>
+
+	<p><div id="respuesta">Aquí se mostrará la respuesta</div></p>
+	<p>Aquí se mostrará el método: <span id="metodo"></span></p>
+
+</body>
+</html>

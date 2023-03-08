@@ -34,16 +34,20 @@
 
     // 5
         for (let i = 0; i < 5; i++) {
+            // almacen[i] = new Coche(`1/${i+1}/2000`, i)
             const coche = new Coche(`1/${i+1}/2000`, i)
             const mot = Math.floor(Math.random() * 2)
             if (mot === 0) {
-                coche.apagar()
+              coche.apagar()
+                // almacen[i].apagar()
             } else {
-                coche.arrancar()
+              coche.arrancar()
+                // almacen[i].arrancar()
             }
             almacen.push(coche)  
         }
-
+        console.log(almacen);
+        // console.log(almacen[1].tipoCombustible);
     // 6
         almacen.forEach(element => {
             if (element.matricula % 2 != 0) {
@@ -52,35 +56,35 @@
         });
         
     // 7
-        for (let i = 0; i < 2; i++) {
+        // for (let i = 0; i < 2; i++) {
 
-            let yearfMat = prompt("Establece el año")
-            while (isNaN(yearfMat)) {
-                alert(`"${yearfMat}" nos es un numero`)
-                yearfMat = prompt("Establece el año")
-            }
+        //     let yearfMat = prompt("Establece el año")
+        //     while (isNaN(yearfMat)) {
+        //         alert(`"${yearfMat}" nos es un numero`)
+        //         yearfMat = prompt("Establece el año")
+        //     }
 
-            let mouthfMat = prompt("Establece el mes")
-            while (isNaN(mouthfMat)) {
-                alert(`"${mouthfMat}" nos es un numero`)
-                mouthfMat = prompt("Establece el año")
-            }
+        //     let mouthfMat = prompt("Establece el mes")
+        //     while (isNaN(mouthfMat)) {
+        //         alert(`"${mouthfMat}" nos es un numero`)
+        //         mouthfMat = prompt("Establece el año")
+        //     }
 
-            let dayfMat = prompt("Establece el día")
-            while (isNaN(dayfMat)) {
-                alert(`"${dayfMat}" nos es un numero`)
-                dayfMat = prompt("Establece el año")
-            }
+        //     let dayfMat = prompt("Establece el día")
+        //     while (isNaN(dayfMat)) {
+        //         alert(`"${dayfMat}" nos es un numero`)
+        //         dayfMat = prompt("Establece el año")
+        //     }
 
-            const coche = new Coche (`${mouthfMat}/${dayfMat}/${yearfMat}`, i + 5)
-            const mot = Math.floor(Math.random() * 2)
-            if (mot === 0) {
-                coche.apagar()
-            } else {
-                coche.arrancar()
-            }
-            almacen.push(coche)
-        }
+        //     const coche = new Coche (`${mouthfMat}/${dayfMat}/${yearfMat}`, i + 5)
+        //     const mot = Math.floor(Math.random() * 2)
+        //     if (mot === 0) {
+        //         coche.apagar()
+        //     } else {
+        //         coche.arrancar()
+        //     }
+        //     almacen.push(coche)
+        // }
 
     // 8
         almacen.forEach(element => {
@@ -92,7 +96,8 @@
         });
     
     // 9 ( A partir de este ejercicio no se como lo tengo que hacer )
-        Coche.tipoCombustible = "electrico"
+        Coche.prototype.tipoCombustible = "electrico"
+        console.log(almacen[0].tipoCombustible); 
 
     // 10
         for (const coche of almacen) {
